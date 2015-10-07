@@ -6,12 +6,14 @@ public class JavaApplication2 {
 
     public static void main(String[] args) {
        
-        int[] vector = {1, 4, 7, 1, 1, 8, 4, 1, 4, 9};
+        Integer[] vector = {1, 4, 7, 1, 1, 8, 4, 1, 4, 9};
         
-        Histogram histo = new Histogram(vector);
-        HashMap <Integer, Integer> histogram = histo.getHisto();
+        String[] vector1 = {"Ana", "Juan", "Pedro", "Lucia", "Pedro", "Lucia"};
         
-        for (Integer key : histogram.keySet()) {
+        Histogram histo = new Histogram(vector1);
+        HashMap <Object, Integer> histogram = histo.getHisto();
+        
+        for (Object key : histogram.keySet()) {
             System.out.println(key + " : " + histogram.get(key));
             
         }
